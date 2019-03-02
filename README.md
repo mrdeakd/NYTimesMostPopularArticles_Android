@@ -9,8 +9,12 @@ Használt elemek :
 *     - Room : Room használata SQLite adatbázishoz.
 *     - RecyclerView : Lista elemek tárolásához.
 *     - Design : Snackbar használata.
+*     - LiveData és ViewModel : Observer minta (View értesítése, ha változott a lista) és például az elforgatáshoz használt ViewModel.
 
 
 Az alkalmazás megjeleníti a NYTimes API-n keresztül a Most Popular cikkeket egy listában. A lista elemeire tudunk nyomni, amik egy új ablakra navigálnak a cikk egy nagyobb méretű megjelenítéséhez. Az új ablakon alul található gombra nyomva a Crome-ban megjelenik az adott cikk teljes egésze. Az alkalmazás figyeli az internet elérhetőségét és ha nincs csatlakoztatva az internethez, akkor ezt Snackbar-on jelzi, illetve nem is engedi megnyitni a linkeket a Crome-ban a gombra kattintva.
 
 
+![Screenshot](Screenshot2.png)
+![Screenshot](Screenshot3.png)
+![Screenshot](Screenshot1.png)
