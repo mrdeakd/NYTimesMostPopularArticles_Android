@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
             onLoadFromNYT()
             swipe_layout.isRefreshing = false
         }
-        NetworkAvailable(this, swipe_layout)
+        networkAvailable(this, swipe_layout)
     }
 
     override fun onDestroy() {
