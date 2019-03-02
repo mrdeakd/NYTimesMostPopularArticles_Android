@@ -18,7 +18,7 @@ class DetailActivity : AppCompatActivity() {
 
         if (extras != null) {
             useExtrasToSetValues(extras)
-            if (NetworkAvailable(this, cL_layout)) {
+            if (networkAvailable(this, cL_layout)) {
                 b_opencrome.setOnClickListener {
                     openCromeFromURL(extras)
                 }
