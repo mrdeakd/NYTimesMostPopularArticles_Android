@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">NYTimesMostPopular</string>
+    <string name="byline">byline</string>
+    <string name="published_date">published_date</string>
+    <string name="title">title</string>
+    <string name="largepic">largepic</string>
+    <string name="url">url</string>
+    <string name="db">db</string>
+    <string name="NoConnection">Internet nem elérhető</string>
+    <string name="Standard_Thumbnail">Standard Thumbnail</string>
+    <string name="Large_Thumbnail">Large Thumbnail</string>
+    <string name="NYTimesURL">http://api.nytimes.com/</string>
+</resources>
