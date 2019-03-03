@@ -15,10 +15,14 @@ fun networkAvailable(context: Context, view: View) : Boolean {
     } else
         false
     if (!internet)
-        Snackbar.make(
-            view,
-            context.getString(R.string.NoConnection),
-            Snackbar.LENGTH_LONG
-        ).show()
+        makeSnackbar(view, context)
     return internet
+}
+
+private fun makeSnackbar(view: View, context: Context) {
+    Snackbar.make(
+        view,
+        context.getString(R.string.NoConnection),
+        Snackbar.LENGTH_LONG
+    ).show()
 }
