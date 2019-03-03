@@ -2,15 +2,10 @@ package hu.homework.bme.mrdeakd.nytimesmostpopular
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.ViewModelProvider
-import android.content.Context
-import android.net.ConnectivityManager
-import android.net.NetworkInfo
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
-import android.view.Menu
 import android.widget.LinearLayout
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder

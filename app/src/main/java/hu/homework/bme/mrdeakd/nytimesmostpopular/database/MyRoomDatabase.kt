@@ -8,7 +8,7 @@ import android.content.Context
 import hu.homework.bme.mrdeakd.nytimesmostpopular.R
 import hu.homework.bme.mrdeakd.nytimesmostpopular.data.ArticleToShow
 
-@Database(entities = arrayOf(ArticleToShow::class), version = 5)
+@Database(entities = [ArticleToShow::class], version = 5)
 abstract class MyRoomDatabase : RoomDatabase() {
 
     abstract fun articleDataDao(): DatabaseDao
@@ -18,8 +18,7 @@ abstract class MyRoomDatabase : RoomDatabase() {
 
         fun getInstance(context: Context): MyRoomDatabase? {
             if (INSTANCE == null) {
-                INSTANCE = Room.databaseBuilder(context.applicationContext, MyRoomDatabase::class.java, context.getString(
-                                    R.string.db)).build()
+                INSTANCE = Room.databaseBuilder(context.applicationContext, MyRoomDatabase::class.java, context.getString(R.string.db)).build()
             }
             return INSTANCE
         }

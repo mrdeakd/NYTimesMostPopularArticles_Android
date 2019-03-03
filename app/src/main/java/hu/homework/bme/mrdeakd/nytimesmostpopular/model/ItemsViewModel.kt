@@ -5,7 +5,6 @@ import android.arch.lifecycle.AndroidViewModel
 import android.arch.lifecycle.LiveData
 import hu.homework.bme.mrdeakd.nytimesmostpopular.database.MyRepository
 import hu.homework.bme.mrdeakd.nytimesmostpopular.data.ArticleToShow
-import hu.homework.bme.mrdeakd.nytimesmostpopular.data.Media_MetaData
 
 class ItemsViewModel(application: Application) : AndroidViewModel(application) {
 
