@@ -1,15 +1,22 @@
-package hu.homework.bme.mrdeakd.nytimesmostpopular.adapterdata
+package hu.homework.bme.mrdeakd.nytimesmostpopular.adapter
 
 import android.app.ActivityOptions
 import android.content.Context
 import android.content.Intent
 import android.support.v4.content.ContextCompat.startActivity
 import com.squareup.picasso.Picasso
-import hu.homework.bme.mrdeakd.nytimesmostpopular.DetailActivity
+import hu.homework.bme.mrdeakd.nytimesmostpopular.view.DetailActivity
 import hu.homework.bme.mrdeakd.nytimesmostpopular.R
 import kotlinx.android.synthetic.main.row_item.view.*
 
-class ArticleItem(private val byline : String?, private val published_date : String?, private val title : String?, private val smallpic : String?, private val largepic : String?, private val url : String?,private val context : Context): com.xwray.groupie.Item<com.xwray.groupie.ViewHolder>(){
+class ArticleItem(private val byline : String,
+                  private val published_date : String,
+                  private val title : String,
+                  private val smallpic : String,
+                  private val largepic : String,
+                  private val url : String,
+                  private val context : Context): com.xwray.groupie.Item<com.xwray.groupie.ViewHolder>(){
+
     override fun getLayout(): Int {
         return R.layout.row_item
     }

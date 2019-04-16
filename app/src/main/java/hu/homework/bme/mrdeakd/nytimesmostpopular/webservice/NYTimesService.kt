@@ -1,6 +1,6 @@
-package hu.homework.bme.mrdeakd.nytimesmostpopular.service
+package hu.homework.bme.mrdeakd.nytimesmostpopular.webservice
 
-import hu.homework.bme.mrdeakd.nytimesmostpopular.data.Response
+import hu.homework.bme.mrdeakd.nytimesmostpopular.apimodel.Response
 import retrofit2.Call
 import retrofit2.http.GET
 

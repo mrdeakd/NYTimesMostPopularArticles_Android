@@ -13,9 +13,9 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:usesCleartextTraffic="true">
-        <activity android:name=".DetailActivity">
+        <activity android:name=".view.DetailActivity">
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".viewmodel.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

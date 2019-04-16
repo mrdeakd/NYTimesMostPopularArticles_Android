@@ -1,4 +1,4 @@
-package hu.homework.bme.mrdeakd.nytimesmostpopular
+package hu.homework.bme.mrdeakd.nytimesmostpopular.view
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +7,8 @@ import kotlinx.android.synthetic.main.activity_detail.*
 import android.content.Intent
 import android.net.Uri
 import android.support.design.widget.Snackbar
+import hu.homework.bme.mrdeakd.nytimesmostpopular.R
+import hu.homework.bme.mrdeakd.nytimesmostpopular.networkAvailable
 
 class DetailActivity : AppCompatActivity() {
 
@@ -57,7 +59,7 @@ class DetailActivity : AppCompatActivity() {
     private fun openCromeFromURL(extras: Bundle) {
         val intent = Intent(Intent.ACTION_VIEW)
         intent.data = Uri.parse(extras.getString(getString(R.string.url)))
-        intent.setPackage(getString(R.string.com_adroid_chrome))
+        intent.setPackage(getString(R.string.com_android_chrome))
         startActivity(intent)
     }
 }

@@ -11,5 +11,5 @@
     <string name="Large_Thumbnail">Large Thumbnail</string>
     <string name="NYTimesURL">http://api.nytimes.com/</string>
     <string name="noconnectionopenlink">Nincs internet, ezért nem lehet megnyitni a linket!</string>
-    <string name="com.adroid.chrome">com.android.chrome</string>
+    <string name="com.android.chrome">com.android.chrome</string>
 </resources>
