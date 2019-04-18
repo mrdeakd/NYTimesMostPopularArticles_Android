@@ -8,12 +8,13 @@ import android.util.Log
 import hu.homework.bme.mrdeakd.nytimesmostpopular.R
 import hu.homework.bme.mrdeakd.nytimesmostpopular.apimodel.Response
 import hu.homework.bme.mrdeakd.nytimesmostpopular.dbmodel.ArticleToShow
+import hu.homework.bme.mrdeakd.nytimesmostpopular.viewmodel.ViewModelCallback
 import hu.homework.bme.mrdeakd.nytimesmostpopular.webservice.NYTimesService
 import retrofit2.Call
 import retrofit2.Callback
 
 
-class WebServiceRepository(private val application: Application, private val dbRepository: DatabaseRepository) {
+class WebServiceRepository(private val application: Application, private val viewmodelcallback : ViewModelCallback) {
 
     var webserviceResponseList: MutableList<ArticleToShow> = mutableListOf()
 
@@ -61,11 +62,11 @@ class WebServiceRepository(private val application: Application, private val dbR
                             )
                         }
                     }
-                    val currentItems = dbRepository.getAllArticle()
+                    val currentItems = viewmodelcallback.getAllArticles()
                     if(!ownEquals(currentItems,webserviceResponseList)){
-                        dbRepository.deleteAllArticles()
+                        viewmodelcallback.deleteAllArticles()
                         for(item in webserviceResponseList)
-                            dbRepository.insertArticle(item)
+                            viewmodelcallback.insertArticle(item)
                     }
                 }
             }

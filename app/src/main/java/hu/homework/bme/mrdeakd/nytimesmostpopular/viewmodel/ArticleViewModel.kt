@@ -7,21 +7,25 @@ import hu.homework.bme.mrdeakd.nytimesmostpopular.repository.DatabaseRepository
 import hu.homework.bme.mrdeakd.nytimesmostpopular.dbmodel.ArticleToShow
 import hu.homework.bme.mrdeakd.nytimesmostpopular.repository.WebServiceRepository
 
-class ArticleViewModel(application: Application) : AndroidViewModel(application) {
+class ArticleViewModel(application: Application) : AndroidViewModel(application), ViewModelCallback {
 
     private val dbRepository: DatabaseRepository = DatabaseRepository(application)
-    private val webserviceRepository: WebServiceRepository = WebServiceRepository(application, dbRepository)
+    private val webserviceRepository: WebServiceRepository = WebServiceRepository(application, this)
     internal var allArticles: LiveData<List<ArticleToShow>>
 
     init {
         allArticles = dbRepository.getAllArticle()
     }
 
-    fun insertArticle(article: ArticleToShow) {
+    override fun getAllArticles() : LiveData<List<ArticleToShow>>{
+        return allArticles
+    }
+
+    override fun insertArticle(article: ArticleToShow) {
         dbRepository.insertArticle(article)
     }
 
-    fun deleteAllArticles() {
+    override fun deleteAllArticles() {
         dbRepository.deleteAllArticles()
     }
 

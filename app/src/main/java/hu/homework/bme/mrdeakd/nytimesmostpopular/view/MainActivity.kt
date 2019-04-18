@@ -1,4 +1,4 @@
-package hu.homework.bme.mrdeakd.nytimesmostpopular.viewmodel
+package hu.homework.bme.mrdeakd.nytimesmostpopular.view
 
 import android.arch.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -12,6 +12,7 @@ import hu.homework.bme.mrdeakd.nytimesmostpopular.adapter.ArticleItem
 import kotlinx.android.synthetic.main.activity_main.*
 import hu.homework.bme.mrdeakd.nytimesmostpopular.dbmodel.ArticleToShow
 import hu.homework.bme.mrdeakd.nytimesmostpopular.networkAvailable
+import hu.homework.bme.mrdeakd.nytimesmostpopular.viewmodel.ArticleViewModel
 
 
 class MainActivity : AppCompatActivity() {
